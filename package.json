@@ -1,7 +1,7 @@
 {
   "name": "polyfills-middleware",
   "description": "polyfill middleware for express, etc.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
