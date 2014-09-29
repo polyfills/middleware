@@ -22,7 +22,6 @@ app.use(require('polyfills-middleware')(options))
 
 Options are:
 
-- `path` - defaults to `/polyfill.js`
 - `maxAge` - defaults to `14 days`
 - `minify` - defaults to `process.env.NODE_ENV === 'production'`.
   Whether to serve the minified version of the polyfill.
