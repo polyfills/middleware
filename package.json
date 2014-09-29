@@ -20,10 +20,11 @@
     "push-polyfills": "^1.0.0"
   },
   "devDependencies": {
-    "rimraf": "2",
-    "supertest": "0",
+    "bluebird": "^2.3.4",
     "istanbul": "0",
-    "mocha": "1"
+    "mocha": "1",
+    "rimraf": "2",
+    "supertest": "0"
   },
   "scripts": {
     "test": "mocha --reporter spec --bail",
