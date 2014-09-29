@@ -1,7 +1,9 @@
 
 var fresh = require('fresh')
+var destroy = require('destroy')
 var accepts = require('accepts')
 var parse = require('url').parse
+var onFinished = require('on-finished')
 var Polyfills = require('push-polyfills')
 
 module.exports = function (options) {
@@ -66,7 +68,11 @@ module.exports = function (options) {
         return
       }
 
-      return polyfill.read(data.name, ext).then(res.end.bind(res))
+      var stream = polyfill.stream(data.name, ext)
+      stream.on('error', next).pipe(res)
+      onFinished(res, function () {
+        destroy(stream)
+      })
     }).catch(next)
   }
 }
