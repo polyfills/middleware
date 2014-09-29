@@ -27,6 +27,20 @@ Options are:
   Whether to serve the minified version of the polyfill.
   Remember that minified versions are always created!
 
+### res.polyfills.push([cb]).then( => )
+
+SPDY push the polyfills if you are using SPDY push.
+Use this within a SPDY server.
+Returns a promise, but optionally accepts a callback.
+
+```js
+app.use(function (req, res, next) {
+  res.polyfills.push().then(function () {
+    res.render('index')
+  }).catch(next)
+})
+```
+
 The [option options](https://github.com/polyfills/polyfills#var-polyfill--polyfillsoptions) are `include` and `exclude`.
 
 [npm-image]: https://img.shields.io/npm/v/polyfills-middleware.svg?style=flat-square
