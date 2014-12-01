@@ -21,12 +21,14 @@
   },
   "devDependencies": {
     "bluebird": "^2.3.4",
+    "express": "^4.10.4",
     "istanbul": "0",
     "mocha": "1",
     "rimraf": "2",
     "supertest": "0"
   },
   "scripts": {
+    "start": "node server.js",
     "test": "mocha --reporter spec --bail",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
