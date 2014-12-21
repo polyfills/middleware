@@ -48,6 +48,7 @@ module.exports = function (options) {
 
     res.setHeader('Cache-Control', cacheControl)
     res.setHeader('Content-Type', 'application/javascript; charset=UTF-8')
+    res.setHeader('Vary', 'User-Agent')
     res.send(polyfill(req.headers['user-agent']))
   }
 }

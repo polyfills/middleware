@@ -15,6 +15,7 @@ describe('GET /polyfill.js', function () {
     .get('/polyfill.js')
     .set('User-Agent', chrome)
     .expect(200)
+    .expect('Vary', 'User-Agent')
     .expect('Content-Type', /application\/javascript/)
     .end(done)
   })
