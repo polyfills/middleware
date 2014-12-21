@@ -11,20 +11,14 @@
   "license": "MIT",
   "repository": "polyfills/middleware",
   "dependencies": {
-    "accepts": "^1.1.0",
-    "destroy": "^1.0.3",
-    "fresh": "^0.2.2",
     "ms": "0",
-    "on-finished": "^2.1.0",
-    "polyfills": "^1.1.2",
-    "push-polyfills": "^1.0.0"
+    "polyfills": "^2.0.0"
   },
   "devDependencies": {
     "bluebird": "^2.3.4",
     "express": "^4.10.4",
     "istanbul": "0",
-    "mocha": "1",
-    "rimraf": "2",
+    "mocha": "2",
     "supertest": "0"
   },
   "scripts": {

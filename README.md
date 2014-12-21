@@ -9,7 +9,7 @@
 [![Downloads][downloads-image]][downloads-url]
 [![Gittip][gittip-image]][gittip-url]
 
-[Polyfills](https://github.com/polyfills/polyfills) middleware for Node, Express, Connect, Restify, etc.
+[Polyfills](https://github.com/polyfills/polyfills) middleware for Express, Connect, etc.
 Uses the `req, res, next` signature.
 Simply add a `<script src="/polyfill.js"></script>` to your HTML pages
 and you've got all the polyfills you could ever need!
@@ -23,25 +23,8 @@ app.use(require('polyfills-middleware')(options))
 Options are:
 
 - `maxAge` - defaults to `14 days`
-- `minify` - defaults to `process.env.NODE_ENV === 'production'`.
-  Whether to serve the minified version of the polyfill.
-  Remember that minified versions are always created!
 
-### res.polyfills.push([cb]).then( => )
-
-SPDY push the polyfills if you are using SPDY push.
-Use this within a SPDY server.
-Returns a promise, but optionally accepts a callback.
-
-```js
-app.use(function (req, res, next) {
-  res.polyfills.push().then(function () {
-    res.render('index')
-  }).catch(next)
-})
-```
-
-The [option options](https://github.com/polyfills/polyfills#var-polyfill--polyfillsoptions) are `include` and `exclude`.
+The [other options](https://github.com/polyfills/polyfills#var-polyfill--polyfillsoptions) are `include` and `exclude`.
 
 [npm-image]: https://img.shields.io/npm/v/polyfills-middleware.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/polyfills-middleware
